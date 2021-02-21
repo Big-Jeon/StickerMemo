@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/ListView_Title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:text="내용"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/ListView_WriteDate"
+        android:layout_marginRight="90dp"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end">
+    </TextView>
+
+    <TextView
+        android:id="@+id/ListView_WriteDate"
+        android:textColor="@color/white"
+        android:text="작성날짜"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/status_bar"
+        android:layout_marginBottom="3dp"
+        android:textSize="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/status_bar"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:background="@android:drawable/presence_online"></TextView>
+
+</RelativeLayout>

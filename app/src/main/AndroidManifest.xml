@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bigjeon.stickermemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_main"
+        android:label="포스트잇 메모"
+        android:roundIcon="@mipmap/ic_main_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <service
+            android:name=".RemoteViewsService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+
+        <receiver
+            android:name=".ConfigWidgetProvider"
+            android:label="포스트잇 메모">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.bigjeon.stickermemo.BUTTON1" />
+                <action android:name="com.bigjeon.stickermemo.BUTTON2" />
+                <action android:name="com.bigjeon.stickermemo.BUTTON3" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider_configure" />
+        </receiver>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Add_Text"></activity>
+        <activity android:name=".Show_Selected_Memo"></activity>
+        <activity android:name=".Change_Text"></activity>
+    </application>
+
+</manifest>
