@@ -15,14 +15,14 @@
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/ListView_WriteDate"
         android:layout_marginRight="90dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:maxLines="1"
         android:ellipsize="end">
     </TextView>
 
     <TextView
         android:id="@+id/ListView_WriteDate"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:text="작성날짜"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

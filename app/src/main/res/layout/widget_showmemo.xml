@@ -4,39 +4,47 @@
     android:id="@+id/mWidgetLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/round_widget_design"
+    android:background="@drawable/main_background"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="0dp">
 
     <RelativeLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="30dp"
         android:background="#00ff0000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <RelativeLayout
             android:id="@+id/btns"
-            android:background="@drawable/under_edge_white"
+            android:background="@drawable/under_edge_black"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
 
             <Button
                 android:id="@+id/btn_list"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
                 android:background="@android:drawable/ic_menu_sort_by_size"
                 android:layout_alignParentLeft="true"></Button>
 
             <TextView
                 android:id="@+id/Widget_AppName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:layout_toRightOf="@+id/btn_list"
                 android:textStyle="bold"
                 android:text="포스트잇 메모"
                 android:gravity="center"
                 android:textSize="20dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
+                android:background="#00ff0000"
                 android:layout_marginRight="60dp"
                 android:maxLines="1"
                 android:ellipsize="end">
@@ -44,25 +52,30 @@
 
             <Button
                 android:id="@+id/btn_add"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
                 android:background="@android:drawable/ic_menu_add"></Button>
         </RelativeLayout>
 
         <ListView
             android:id="@+id/Memo_List"
+            android:paddingRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ff0000"
             android:layout_below="@+id/btns"
             android:visibility="visible"
+            android:layout_marginLeft="10dp"
             tools:listitem="@layout/listview_memo"></ListView>
 
         <RelativeLayout
             android:id="@+id/memo_View"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="5dp"
             android:background="@android:color/transparent"
             android:layout_below="@+id/btns"
             android:visibility="invisible">
@@ -70,7 +83,7 @@
                 android:id="@+id/Show_Memo_Text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
@@ -82,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_alignParentBottom="true"
                 android:text="작성시간 : "
                 android:textSize="10dp"></TextView>
